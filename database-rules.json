@@ -131,9 +131,9 @@
       ".read": true,
       "$uid": {
         ".write": "auth.uid === $uid",
-        "full_name": {
+        /*"full_name": {
           ".validate": "auth.token.name === newData.val() || (auth.token.name === null && newData.val() === 'Anonymous')"
-        },
+        },*/
         "profile_picture": {
           ".validate": "true"
         },
