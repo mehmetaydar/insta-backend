@@ -29,5 +29,10 @@ service firebase.storage {
       allow read;
       allow write: if isAdmin() || isOwner(userId) && (isResourceBeingDeleted() || isImageBelowMaxSize(5));
     }
+    //added by mehmet
+    match /{userId}/profile/{fileName} {
+      allow read;
+      allow write: if isAdmin() || isOwner(userId) && (isResourceBeingDeleted() || isImageBelowMaxSize(5));
+    }
   }
 }

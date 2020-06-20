@@ -134,6 +134,9 @@
         /*"full_name": {
           ".validate": "auth.token.name === newData.val() || (auth.token.name === null && newData.val() === 'Anonymous')"
         },*/
+        "full_name": {
+          ".validate": "newData.isString()"
+        },
         "profile_picture": {
           ".validate": "true"
         },

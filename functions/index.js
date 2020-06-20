@@ -15,6 +15,16 @@
  */
 'use strict';
 
+/** 
+ * test 
+*/
+if (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'addMessage') {
+  exports.addMessage = require('./test').addMessage;
+}
+if (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'makeUppercase') {
+  exports.makeUppercase = require('./test').makeUppercase;
+}
+
 /**
  * Triggers when a user gets a new follower and sends notifications if the user has enabled them.
  * Also avoids sending multiple notifications for the same user by keeping a timestamp of sent notifications.
